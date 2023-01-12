@@ -33,16 +33,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
+        // responsible for measuring and positioning item,
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         binding.recyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
 
+        // adding array list to our adapter class.
         adapter = new UserListAdapter(userlist);
+
+        // setting adapter to our recycler view.
         binding.recyclerView.setAdapter(adapter);
 
+        // framework provides the ViewModels, a special mechanism is required to create instances of them
         listViewModel = new ViewModelProvider(this).get(UserListViewModel.class);
+
+        /*
+         Attach the Observer object to the LiveData object using the observe() method. The observe() method takes a LifecycleOwner object.
+         This subscribes the Observer object to the LiveData object so that it is notified of changes. You usually attach the Observer object
+         in a UI controller, such as an activity or fragment.
+         */
         listViewModel.getUserListObserver().observe(this, new Observer<List<UserModel>>() {
             @Override
             public void onChanged(List<UserModel> list) {
+                // check user array list empty or null
                 if (list!=null){
                     userlist = list;
                     adapter.updateUserList(list);
@@ -54,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        // call retrofit api
         listViewModel.makeApiCall();
     }
 }
