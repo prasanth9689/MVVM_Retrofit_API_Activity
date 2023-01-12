@@ -12,3 +12,4 @@ MVVM stands for Model, View, ViewModel. Model: This holds the data of the applic
 Attach the Observer object to the LiveData object using the observe() method. The observe() method takes a LifecycleOwner object. This subscribes the Observer object to the LiveData object so that it is notified of changes. You usually attach the Observer object in a UI controller, such as an activity or fragment.
 
 ![Alt text](https://github.com/prasanth9689/MVVM_Retrofit_API_Activity/blob/master/screenshots/Screenshot_20230111_193527.png?raw=true "Optional title")
+<a href="url"><img src="https://github.com/prasanth9689/MVVM_Retrofit_API_Activity/blob/master/screenshots/Screenshot_20230111_193527.png?raw=true" align="left" height="48" width="48" ></a>
