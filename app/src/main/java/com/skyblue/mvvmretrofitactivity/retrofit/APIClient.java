@@ -4,7 +4,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class APIClient {
-    public static String baseurl="http://172.16.32.31"; // volley_array.json
+    public static String baseurl="http://172.16.32.31";
     private static Retrofit retrofit;
 
     public static Retrofit getRetroClient()
