@@ -4,6 +4,7 @@ public class UserModel {
     String name;
     String image;
     String post_image;
+    String post_text;
 
     public void setName(String name) {
         this.name = name;
@@ -17,6 +18,10 @@ public class UserModel {
         this.post_image = post_image;
     }
 
+    public void setPost_text(String post_text) {
+        this.post_text = post_text;
+    }
+
     public String getName() {
         return name;
     }
@@ -27,5 +32,9 @@ public class UserModel {
 
     public String getPost_image() {
         return post_image;
+    }
+
+    public String getPost_text() {
+        return post_text;
     }
 }

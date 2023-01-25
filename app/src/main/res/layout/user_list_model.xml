@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="300dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="20dp"
@@ -27,13 +27,28 @@
             android:layout_toRightOf="@id/imageView"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:text="Text"/>
+            android:text="Text"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semibold"/>
+
+        <TextView
+            android:id="@+id/post_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_name"
+            android:layout_toRightOf="@id/imageView"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:text="Text"
+            android:textColor="#515151"
+            android:fontFamily="@font/poppins_semibold"/>
 
         <ImageView
             android:id="@+id/postImageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageView"
+            android:layout_below="@id/post_text"
             android:layout_marginTop="10dp"
             android:scaleType="fitXY"
             android:adjustViewBounds="true"/>
