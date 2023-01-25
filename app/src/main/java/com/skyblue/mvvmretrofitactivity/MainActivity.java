@@ -1,5 +1,6 @@
 package com.skyblue.mvvmretrofitactivity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AbsListView;
 import android.widget.TextView;
 
 import com.skyblue.mvvmretrofitactivity.adapters.UserListAdapter;

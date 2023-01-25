@@ -39,6 +39,10 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
         Glide.with(holder.imageView.getContext())
                 .load(userlist.get(position).getImage())
                 .into(holder.imageView);
+
+        Glide.with(holder.postImageView.getContext())
+                .load(userlist.get(position).getPost_image())
+                .into(holder.postImageView);
     }
 
     @Override
@@ -51,11 +55,12 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
 
     public class UserViewHolder extends RecyclerView.ViewHolder{
         TextView txtUserName;
-        ImageView imageView;
+        ImageView imageView, postImageView;
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
             txtUserName = itemView.findViewById(R.id.txt_name);
             imageView = itemView.findViewById(R.id.imageView);
+            postImageView = itemView.findViewById(R.id.postImageView);
         }
     }
 }
